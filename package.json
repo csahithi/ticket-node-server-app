@@ -1,0 +1,17 @@
+{
+  "name": "ticket-node-server-app",
+  "version": "1.0.0",
+  "description": "Node.js HTTP Web Server for the ticketing application",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Node",
+    "REST",
+    "Server",
+    "HTTP"
+  ],
+  "author": "Sahithi Chigurupati",
+  "license": "ISC"
+}
