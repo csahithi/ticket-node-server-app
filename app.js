@@ -5,6 +5,7 @@ import cors from "cors";
 import mongoose from 'mongoose';
 import UserRoutes from './users/routes.js';
 import FollowerRoutes from './followers/routes.js';
+import LikesRoutes from './likes/routes.js';
 const CONNECTION_STRING = process.env.DB_CONNECTION_STRING || 'mongodb+srv://sahithic:newpassword@tickets.ii8raxu.mongodb.net/?retryWrites=true&w=majority'
 mongoose.connect(CONNECTION_STRING);
 const app = express();
@@ -30,3 +31,4 @@ app.use(session(sessionOptions));
 app.use(express.json());
 UserRoutes(app);
 FollowerRoutes(app);
+LikesRoutes(app);
