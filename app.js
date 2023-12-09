@@ -7,6 +7,8 @@ import UserRoutes from './users/routes.js';
 import FollowerRoutes from './followers/routes.js';
 import LikesRoutes from './likes/routes.js';
 import ReviewRoutes from './reviews/routes.js';
+import EventRoutes from './events/routes.js';
+import TicketRoutes from './tickets/routes.js';
 const CONNECTION_STRING = process.env.DB_CONNECTION_STRING || 'mongodb+srv://sahithic:newpassword@tickets.ii8raxu.mongodb.net/?retryWrites=true&w=majority'
 mongoose.connect(CONNECTION_STRING);
 const app = express();
@@ -34,3 +36,5 @@ UserRoutes(app);
 FollowerRoutes(app);
 ReviewRoutes(app);
 LikesRoutes(app);
+EventRoutes(app);
+TicketRoutes(app);
