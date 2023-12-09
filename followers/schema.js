@@ -1,16 +1,15 @@
 import mongoose from "mongoose";
-
-const Schema = mongoose.Schema({
+const schema = mongoose.Schema({
     followerId: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: "User",
+        ref: "users",
         required: true,
     },
     followingId: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: "User",
+        ref: "users",
         required: true,
     }
 }, {collection: "followers"});
 
-export default Schema;
+export default schema;

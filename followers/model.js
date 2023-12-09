@@ -1,6 +1,4 @@
 import mongoose from "mongoose";
-import followersSchema from "./schema.js";
-
-const FollowersModel = mongoose.model("followers", followersSchema);
-
-export default FollowersModel;
+import schema from "./schema.js";
+const model = mongoose.model("followers", schema);
+export default model;
