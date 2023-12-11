@@ -11,6 +11,9 @@ export const findAllEvents = async () => {
 export const findEventById = async (eventId) => {
     return await EventModel.findById(eventId);
 }
+export const findEventsByUserId = async (userId) => {
+    return await EventModel.find({ SellerId: userId });
+  }
 
 export const updateEvent = async (eventId, event) => {
     return await EventModel.updateOne({_id: eventId}, {$set: event})

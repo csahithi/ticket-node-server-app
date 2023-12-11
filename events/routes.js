@@ -18,6 +18,11 @@ const findEventById = async (req, res) => {
     const event = await eventsDao.findEventById(eventId)
     res.json(event)
 }
+const findEventsByUserId = async (req, res) => {
+    const userId = req.params['userId'];
+    const events = await eventsDao.findEventsByUserId(userId);
+    res.json(events);
+}
 
 const updateEvent = async (req, res) => {
     const eventId = req.params['eventId']
@@ -52,5 +57,6 @@ const searchEvents = async (req, res) => {
     app.get('/api/events/:eventId', findEventById)
     app.put('/api/events/:eventId', updateEvent)
     app.delete('/api/events/:eventId', deleteEvent)
+    app.get('/api/users/:userId/events', findEventsByUserId)
 }
 export default EventRoutes;
