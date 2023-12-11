@@ -21,6 +21,7 @@ const findEventById = async (req, res) => {
 const findEventsByUserId = async (req, res) => {
     const userId = req.params['userId'];
     const events = await eventsDao.findEventsByUserId(userId);
+    console.log("Node",events);
     res.json(events);
 }
 
